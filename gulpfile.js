@@ -15,6 +15,8 @@ const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 
 const webp = require("gulp-webp");
+const svgStore = require("gulp-svgstore");
+const cheerio = require("gulp-cheerio");
 
 sass.compiler = require("node-sass");
 
@@ -63,6 +65,20 @@ const processWebp = function () {
         .pipe(gulp.dest("build/img"))
 };
 
+const processSvgSprite = function () {
+    return gulp.src("source/img/**/*.svg")
+        .pipe(svgStore({inlineSvg: true}))
+        .pipe(rename("sprite.svg"))
+        .pipe(cheerio({
+            run: function ($) {
+                $("[fill]").removeAttr("fill");
+                $("[style]").removeAttr("style");
+            },
+            parserOptions: { xmlMode: true }
+        }))
+        .pipe(gulp.dest("build/img"));
+};
+
 const processDependenciesCss = function () {
     return gulp.src([
         "node_modules/normalize.css/normalize.css"
@@ -96,7 +112,7 @@ const processHtml = function () {
         .pipe(gulp.dest("build"))
 };
 
-const build = gulp.series(clean, processWebp, processCopyImg, gulp.parallel(processDependenciesCss, processSass), processHtml);
+const build = gulp.series(clean, processWebp, processCopyImg, processSvgSprite, gulp.parallel(processDependenciesCss, processSass), processHtml);
 
 exports.build = build;
 exports.start = gulp.series(build, runServer);
