@@ -1,0 +1,23 @@
+.sort {
+  @include list-reset();
+  display: flex;
+}
+
+.sort__item {
+  flex-basis: 25%;
+  background-color: #EBEBEB;
+  border: 1px solid #CBCACA;
+  border-radius: 6px;
+}
+
+.sort__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.sort__link {
+  display: block;
+  padding: 6px 0;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}

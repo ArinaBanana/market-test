@@ -1,0 +1,23 @@
+.header {
+  @include fixed-container;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 10px;
+
+  @media (min-width: $content-width-desktop) {
+    flex-direction: row;
+  }
+}
+
+.header__logo {
+  display: none;
+
+  @media (min-width: $content-width-desktop) {
+    display: block;
+  }
+}
+
+.header__container {
+  display: flex;
+  margin-bottom: 10px;
+}

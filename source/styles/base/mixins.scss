@@ -1,0 +1,18 @@
+@mixin none-indentation {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin list-reset {
+  @include none-indentation;
+
+  list-style: none;
+}
+
+@mixin fixed-container {
+  margin: 0 auto;
+
+  @media (min-width: $content-width-desktop) {
+    width: $content-width-desktop;
+  }
+}

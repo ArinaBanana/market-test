@@ -1,0 +1,12 @@
+.button-filters {
+  @include none-indentation;
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  background-color: $light;
+}
+
+.button-filters__icon {
+  opacity: 0.5;
+}

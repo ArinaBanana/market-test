@@ -1,0 +1,24 @@
+.gallery {
+  @include fixed-container;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery__item {
+  flex-basis: 96px;
+  height: 96px;
+  background-color: $deep-light;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.gallery__item:not(:nth-child(4n)) {
+  margin-right: auto;
+}
+
+.gallery__img {
+  width: 96px;
+  height: 96px;
+  border-radius: 4px;
+}

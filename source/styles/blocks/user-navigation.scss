@@ -1,0 +1,18 @@
+.user-navigation {
+  @include list-reset;
+  display: flex;
+  padding: 15px 0;
+}
+
+.user-navigation__item {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.user-navigation__link {
+  display: none;
+
+  text-decoration: none;
+  color: #222222;
+}

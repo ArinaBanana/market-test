@@ -4,29 +4,89 @@
     <meta charset="UTF-8">
     <title>Market</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- inject:css -->
     <!-- endinject -->
   </head>
   <body>
     <header class="header">
-      <div class="header__logo logo"></div>
-
+      <div class="header__logo logo">
+        <img src="img/logo/Logo-light.webp" alt="Market IBuy art">
+      </div>
       <ul class="header__sort sort">
-        <li class="sort__item">Top</li>
-        <li class="sort__item">Painters</li>
-        <li class="sort__item">Design</li>
-        <li class="sort__item">Tags</li>
+        <li class="sort__item">
+          <a class="sort__link" href="#">Top</a>
+        </li>
+        <li class="sort__item">
+          <a class="sort__link" href="#">Painters</a>
+        </li>
+        <li class="sort__item">
+          <a class="sort__link" href="#">Design</a>
+        </li>
+        <li class="sort__item">
+          <a class="sort__link" href="#">Tags</a>
+        </li>
       </ul>
 
-      <div class="search">
-        <input class="search__input" type="search" id="field-search">
-        <label class="search__label" for="field-search">Search:</label>
+      <div class="header__container">
+        <div class="header__search search">
+          <input class="search__input" type="search" id="field-search" placeholder="Search">
+          <label class="visually-hidden" for="field-search">Search:</label>
+        </div>
+        <button class="header__button button-filters">
+          <svg class="button-filters__icon" width="20" height="20">
+            <use xlink:href="img/sprite.svg#mixer"></use>
+          </svg>
+        </button>
       </div>
-
-      <button class="filters"></button>
     </header>
     <main class="main">
       <div class="main__gallery gallery">
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/1.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/2.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/3.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/4.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/5.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/1.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/2.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/3.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/4.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/5.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/1.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/2.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/3.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/4.webp" alt="Product item">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__img" src="img/gallery/5.webp" alt="Product item">
+        </div>
         <div class="gallery__item">
           <img class="gallery__img" src="img/gallery/1.webp" alt="Product item">
         </div>
@@ -46,11 +106,46 @@
 
       <div class="main__user-navigation">
         <ul class="user-navigation">
-          <li class="user-navigation__item">Feed</li>
-          <li class="user-navigation__item">Gallery</li>
-          <li class="user-navigation__item">Deals</li>
-          <li class="user-navigation__item">Notify</li>
-          <li class="user-navigation__item">Profile</li>
+          <li class="user-navigation__item">
+            <span class="user-navigation__icon">
+              <svg width="30" height="30">
+                <use xlink:href="img/sprite.svg#home-dark"></use>
+              </svg>
+            </span>
+            <a class="user-navigation__link" href="#">Feed</a>
+          </li>
+          <li class="user-navigation__item">
+            <span class="user-navigation__icon">
+              <svg width="30" height="30">
+                <use xlink:href="img/sprite.svg#menu-dark"></use>
+              </svg>
+            </span>
+            <a class="user-navigation__link" href="#">Gallery</a>
+          </li>
+          <li class="user-navigation__item">
+            <span class="user-navigation__icon">
+              <svg width="30" height="30">
+                <use xlink:href="img/sprite.svg#add-dark"></use>
+              </svg>
+            </span>
+            <a class="user-navigation__link" href="#">Deals</a>
+          </li>
+          <li class="user-navigation__item">
+            <span class="user-navigation__icon">
+              <svg width="30" height="30">
+                <use xlink:href="img/sprite.svg#chat-dark"></use>
+              </svg>
+            </span>
+            <a class="user-navigation__link" href="#">Notify</a>
+          </li>
+          <li class="user-navigation__item">
+            <span class="user-navigation__icon">
+              <svg width="30" height="30">
+                <use xlink:href="img/sprite.svg#user-dark"></use>
+              </svg>
+            </span>
+            <a class="user-navigation__link" href="#">Profile</a>
+          </li>
         </ul>
       </div>
     </main>
