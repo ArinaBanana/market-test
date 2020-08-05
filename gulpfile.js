@@ -14,6 +14,8 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("gulp-csso");
 
+const webp = require("gulp-webp");
+
 sass.compiler = require("node-sass");
 
 const stylelint = function () {
@@ -48,6 +50,19 @@ const runServer = function () {
     gulp.watch("source/*.html", gulp.series(processHtml, reloadServer));
 };
 
+const processCopyImg = function () {
+    return gulp.src(["source/img/**"], {
+        base: "source"
+    })
+        .pipe(gulp.dest("build"))
+};
+
+const processWebp = function () {
+    return gulp.src("source/img/**/*.{png,jpg,jpeg}")
+        .pipe(webp({quality: 90}))
+        .pipe(gulp.dest("build/img"))
+};
+
 const processSass = function () {
     return gulp.src("source/styles/main.scss")
         .pipe(sass().on("error", sass.logError))
@@ -71,7 +86,7 @@ const processHtml = function () {
         .pipe(gulp.dest("build"))
 };
 
-const build = gulp.series(clean, processSass, processHtml);
+const build = gulp.series(clean, processWebp, processCopyImg, processSass, processHtml);
 
 exports.build = build;
 exports.start = gulp.series(build, runServer);
