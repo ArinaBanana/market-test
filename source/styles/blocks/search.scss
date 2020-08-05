@@ -1,3 +1,7 @@
+.search {
+  position: relative;
+}
+
 .search__input {
   @include none-indentation;
   width: 356px;
@@ -8,4 +12,16 @@
   border: none;
   border-radius: 6px;
   background-color: $deep-light;
+}
+
+.search__input::placeholder {
+  font-weight: 700;
+  padding-left: 38px;
+}
+
+.search__icon {
+  opacity: 0.5;
+  position: absolute;
+  left: 16px;
+  top: 7px;
 }
