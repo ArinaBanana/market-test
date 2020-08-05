@@ -1,17 +1,20 @@
 .sort {
   @include list-reset();
-  display: flex;
+  white-space: nowrap;
 }
 
 .sort__item {
-  flex-basis: 25%;
+  width: 99px;
+  margin-right: 10px;
+  display: inline-block;
+
   background-color: #EBEBEB;
   border: 1px solid #CBCACA;
   border-radius: 6px;
 }
 
-.sort__item:not(:last-child) {
-  margin-right: 10px;
+.sort__item:first-child {
+  margin-left: 10px;
 }
 
 .sort__link {

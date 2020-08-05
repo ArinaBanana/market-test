@@ -2,7 +2,7 @@
   @include fixed-container;
   display: flex;
   flex-direction: column-reverse;
-  padding: 10px;
+  padding: 10px 0;
 
   @media (min-width: $content-width-desktop) {
     flex-direction: row;
@@ -17,7 +17,13 @@
   }
 }
 
+.header__sort {
+  width: 100%;
+  overflow-y: scroll;
+}
+
 .header__container {
   display: flex;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
