@@ -63,6 +63,16 @@ const processWebp = function () {
         .pipe(gulp.dest("build/img"))
 };
 
+const processDependenciesCss = function () {
+    return gulp.src([
+        "node_modules/normalize.css/normalize.css"
+    ])
+        .pipe(csso())
+        .pipe(rename({suffix: ".min"}))
+        .pipe(gulp.dest("build/css"));
+};
+
+
 const processSass = function () {
     return gulp.src("source/styles/main.scss")
         .pipe(sass().on("error", sass.logError))
@@ -86,7 +96,7 @@ const processHtml = function () {
         .pipe(gulp.dest("build"))
 };
 
-const build = gulp.series(clean, processWebp, processCopyImg, processSass, processHtml);
+const build = gulp.series(clean, processWebp, processCopyImg, gulp.parallel(processDependenciesCss, processSass), processHtml);
 
 exports.build = build;
 exports.start = gulp.series(build, runServer);
