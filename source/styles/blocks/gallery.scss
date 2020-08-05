@@ -11,14 +11,30 @@
   margin-bottom: 10px;
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  margin-right: auto;
+
+  @media (min-width: $content-width-desktop) {
+    flex-basis: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
 }
 
-.gallery__item:not(:nth-child(4n)) {
-  margin-right: auto;
+.gallery__item:nth-child(4n) {
+  margin-right: 0;
+
+  @media (min-width: $content-width-desktop) {
+    margin-right: auto;
+  }
 }
 
 .gallery__img {
   width: 96px;
   height: 96px;
   border-radius: 4px;
+
+  @media (min-width: $content-width-desktop) {
+    width: 200px;
+    height: 200px;
+  }
 }

@@ -6,6 +6,8 @@
 
   @media (min-width: $content-width-desktop) {
     flex-direction: row;
+    align-items: center;
+    padding: 26px 0 24px 0;
   }
 }
 
@@ -14,6 +16,7 @@
 
   @media (min-width: $content-width-desktop) {
     display: block;
+    margin-right: 30px;
   }
 }
 
@@ -26,4 +29,8 @@
   display: flex;
   margin-bottom: 10px;
   margin-left: 10px;
+
+  @media (min-width: $content-width-desktop) {
+    margin-bottom: 0;
+  }
 }

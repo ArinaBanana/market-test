@@ -1,1 +1,12 @@
-
+.main__user-navigation {
+  @media (min-width: $content-width-desktop) {
+    position: sticky;
+    bottom: 20px;
+    margin: 0 auto;
+    background-color: #E8E8E8;
+    opacity: 0.9;
+    border-radius: 45px;
+    width: 70%;
+    max-width: 910px;
+  }
+}
