@@ -1,12 +1,11 @@
 <template>
-  <div>
     <div class="wrapper">
       <Header></Header>
       <Main></Main>
       <Footer></Footer>
+
+      <PopupFilters></PopupFilters>
     </div>
-    <PopupFilters></PopupFilters>
-  </div>
 </template>
 
 <script>
