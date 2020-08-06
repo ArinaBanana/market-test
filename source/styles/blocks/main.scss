@@ -8,10 +8,12 @@
 }
 
 .main__gallery {
-  margin-left: -5px;
-  margin-right: -5px;
+  @media (min-width: $width-mobile-view) {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
 
-  @media (min-width: $content-width-desktop) {
+  @media (min-width: $width-tablet-view) {
     margin-left: -10px;
     margin-right: -10px;
   }

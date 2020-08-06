@@ -13,6 +13,11 @@
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 
+  @media (min-width: $width-tablet-view) {
+    width: 250px;
+    height: 250px;
+  }
+
   @media (min-width: $content-width-desktop) {
     width: 200px;
     height: 200px;
