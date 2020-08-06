@@ -5,10 +5,20 @@
 .main__container {
   @include fixed-container;
   overflow: hidden;
+  margin-top: 10px;
+
+  @media (min-width: 415px) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $content-width-desktop) {
+    padding: 0;
+    margin-top: 20px;
+  }
 }
 
 .main__gallery {
-  @media (min-width: $width-mobile-view) {
+  @media (width: $width-mobile-view) {
     margin-left: -5px;
     margin-right: -5px;
   }

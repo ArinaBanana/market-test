@@ -1,4 +1,6 @@
 .footer {
+  margin-top: auto;
+
   @media (min-width: $content-width-desktop) {
     position: absolute;
     bottom: 20px;
