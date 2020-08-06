@@ -11,7 +11,7 @@
     <div class="header__container">
       <Search></Search>
 
-      <button class="header__button button-filters">
+      <button @click="handleButtonClick" class="header__button button-filters">
         <svg class="button-filters__icon" width="20" height="20">
           <use xlink:href="img/sprite.svg#mixer"></use>
         </svg>
@@ -29,6 +29,11 @@ export default {
   components: {
     Sort,
     Search
+  },
+  methods: {
+    handleButtonClick() {
+      this.$emit(`clickFilters`);
+    }
   }
 }
 </script>

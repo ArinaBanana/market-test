@@ -1,6 +1,6 @@
 <template>
   <ul class="filters__list">
-    <FiltersItem v-for="item in items" :item="item"></FiltersItem>
+    <FiltersItem v-for="item in items" :item="item" :key="item"></FiltersItem>
   </ul>
 </template>
 

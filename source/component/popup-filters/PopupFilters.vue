@@ -1,9 +1,9 @@
 <template>
-  <section class="filters hidden">
+  <section class="filters">
     <div class="filters__wrapper">
       <div class="filters__container">
         <div class="filters__main-title">Filter</div>
-        <button class="filters__button-close button-close">
+        <button @click="handleCloseButtonClick" class="filters__button-close button-close">
           <svg class="button-close__icon" width="20" height="20">
             <use xlink:href="img/sprite.svg#close"></use>
           </svg>
@@ -48,6 +48,11 @@ export default {
   data: () => ({
     prices: [`0-200`, `200-400`, `400-600`, `More`],
     shapes: [`Circle`, `Square`, `Rectangle`, `Triangle`]
-  })
+  }),
+  methods: {
+    handleCloseButtonClick() {
+      this.$emit(`clickCloseButton`);
+    }
+  }
 }
 </script>

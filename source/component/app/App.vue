@@ -1,10 +1,10 @@
 <template>
     <div class="wrapper">
-      <Header></Header>
+      <Header @clickFilters="openPopupFilters"></Header>
       <Main></Main>
       <Footer></Footer>
 
-      <PopupFilters></PopupFilters>
+      <PopupFilters @clickCloseButton="closePopupFilters" v-if="isPopupVisible"></PopupFilters>
     </div>
 </template>
 
@@ -21,6 +21,18 @@ export default {
     Main,
     Footer,
     PopupFilters
+  },
+  data: () => ({
+    isPopupVisible: false,
+  }),
+  methods: {
+    openPopupFilters() {
+      this.isPopupVisible = true;
+    },
+
+    closePopupFilters() {
+      this.isPopupVisible = false;
+    }
   }
 }
 </script>
