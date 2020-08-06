@@ -12,81 +12,22 @@
 
       <section class="filters__price">
         <div class="filters__title">Price ( $ )</div>
-        <ul class="filters__list">
-          <li class="filters__item">
-            <span class="filters__span">0-200</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">200-400</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">400-600</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">More</span>
-          </li>
-        </ul>
+        <FiltersList :items="prices"></FiltersList>
 
         <p class="filters__price-range">0 – $1 000 000</p>
 
-        <div class="filters__range range">
-          <div class="range__runner range__runner--left"></div>
-          <div class="range__toggle"></div>
-          <div class="range__runner range__runner--right"></div>
-        </div>
+        <Range></Range>
       </section>
 
       <section class="filters__shape">
         <div class="filters__title">Shape</div>
-
-        <ul class="filters__list">
-          <li class="filters__item">
-            <span class="filters__span">Circle</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">Square</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">Rectangle</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">Triangle</span>
-          </li>
-        </ul>
+        <FiltersList :items="shapes"></FiltersList>
       </section>
 
       <section class="filters__size">
         <div class="filters__title">Size (Width / Height)</div>
-
-        <ul class="filters__list">
-          <li class="filters__item">
-            <span class="filters__span">0-200</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">200-400</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">400-600</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">More</span>
-          </li>
-        </ul>
-
-        <ul class="filters__list">
-          <li class="filters__item">
-            <span class="filters__span">0-200</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">200-400</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">400-600</span>
-          </li>
-          <li class="filters__item">
-            <span class="filters__span">More</span>
-          </li>
-        </ul>
+        <FiltersList :items="prices"></FiltersList>
+        <FiltersList :items="prices"></FiltersList>
       </section>
     </div>
 
@@ -95,7 +36,18 @@
 </template>
 
 <script>
+import FiltersList from "../filters-list/FiltersList.vue";
+import Range from "../range/Range.vue";
+
 export default {
-  name: "PopupFilters"
+  name: "PopupFilters",
+  components: {
+    FiltersList,
+    Range
+  },
+  data: () => ({
+    prices: [`0-200`, `200-400`, `400-600`, `More`],
+    shapes: [`Circle`, `Square`, `Rectangle`, `Triangle`]
+  })
 }
 </script>
