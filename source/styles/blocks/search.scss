@@ -4,14 +4,17 @@
 
 .search__input {
   @include none-indentation;
-  width: 356px;
+  min-width: 80%;
   display: block;
-  margin-right: 10px;
   padding: 6px 0;
 
   border: none;
   border-radius: 6px;
   background-color: $deep-light;
+
+  @media (min-width: $width-mobile-view) {
+    width: 356px;
+  }
 }
 
 .search__input::placeholder {
