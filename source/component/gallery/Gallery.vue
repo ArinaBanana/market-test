@@ -1,12 +1,14 @@
 <template>
   <section class="main__gallery gallery">
-    <GalleryItem v-for="image in images" :path="image"></GalleryItem>
+    <GalleryItem v-for="image in images" :image="image"></GalleryItem>
   </section>
 </template>
 
 <script>
-import {images} from "../../mock/images";
+import {generateImages} from "../../mock/images";
 import GalleryItem from "../gallery-item/GalleryItem.vue";
+
+const images = generateImages();
 
 export default {
   name: "Gallery",
