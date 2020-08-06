@@ -1,0 +1,18 @@
+.range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range__toggle {
+  width: 335px;
+  height: 5px;
+  background-color: #717171;
+}
+
+.range__runner {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #EBEBEB;
+}

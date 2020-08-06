@@ -1,0 +1,126 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #D1D1D1;
+  padding-top: 5px;
+
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  @media (min-width: $content-width-desktop) {
+    padding-top: 32px;
+    width: 30%;
+    left: initial;
+  }
+}
+
+.filters__wrapper {
+  padding: 0 20px;
+
+  @media (min-width: $content-width-desktop) {
+    padding: 0 27px;
+  }
+}
+
+.filters__price {
+  margin-bottom: 43px;
+
+  @media (min-width: $content-width-desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.filters__shape {
+  margin-bottom: 18px;
+
+  @media (min-width: $content-width-desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.filters__container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+
+  @media (min-width: $content-width-desktop) {
+    margin-bottom: 34px;
+  }
+}
+
+.filters__main-title {
+  font-size: $font-l;
+  font-weight: 700;
+  color: #717171;
+}
+
+.filters__title {
+  color: #717171;
+  font-weight: 500;
+  margin-bottom: 16px;
+
+  @media (min-width: $content-width-desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.filters__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 17px;
+
+  @media (min-width: $content-width-desktop) {
+    margin-bottom: 20px;
+  }
+}
+
+.filters__item {
+  flex-basis: 25%;
+}
+
+.filters__item:not(:last-child) {
+  padding-right: 9px;
+}
+
+.filters__span {
+  display: block;
+  background-color: #EBEBEB;
+  border: 1px solid #CBCACA;
+  padding: 8px 0;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filters__span:hover {
+  background-color: #717171;
+  border: 1px solid #CBCACA;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.filters__price-range {
+  @include none-indentation;
+  font-size: $font-xs;
+  font-weight: 700;
+  color: #717171;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.filters__button-apply {
+  display: block;
+  width: 100%;
+  margin-top: auto;
+  font-size: $font-m;
+  background-color: #DBDBDB;
+  border: none;
+  padding: 18px 0;
+}
+
+.filters__button-close {
+  margin-left: auto;
+}
