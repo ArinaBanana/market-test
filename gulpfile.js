@@ -18,6 +18,8 @@ const webp = require("gulp-webp");
 const svgStore = require("gulp-svgstore");
 const cheerio = require("gulp-cheerio");
 
+const webpack = require("webpack-stream");
+
 sass.compiler = require("node-sass");
 
 const stylelint = function () {
@@ -112,7 +114,13 @@ const processHtml = function () {
         .pipe(gulp.dest("build"))
 };
 
-const build = gulp.series(clean, processWebp, processCopyImg, processSvgSprite, gulp.parallel(processDependenciesCss, processSass), processHtml);
+const processWebpack = function () {
+    return gulp.src("source/index.js")
+        .pipe(webpack(require('./webpack.config.js')))
+        .pipe(gulp.dest("build"))
+};
+
+const build = gulp.series(clean, processWebp, processCopyImg, processSvgSprite, gulp.parallel(processDependenciesCss, processSass, processWebpack), processHtml);
 
 exports.build = build;
 exports.start = gulp.series(build, runServer);
