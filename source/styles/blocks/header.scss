@@ -42,4 +42,9 @@
 .header__button {
   margin-right: 10px;
   display: block;
+
+  @media (min-width: $content-width-desktop) {
+    margin-right: 0;
+    margin-left: 30px;
+  }
 }
