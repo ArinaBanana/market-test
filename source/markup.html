@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- inject:css -->
+    <!-- endinject -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <section class="header__logo logo">
+          <img class="logo__img" src="img/logo/Logo-light.webp" alt="Market IBuy art">
+        </section>
+
+        <section class="header__sort">
+          <ul class="sort">
+            <li class="sort__item">
+              <a class="sort__link" href="#">Top</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">Painters</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">Design</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">Tags</a>
+            </li>
+          </ul>
+        </section>
+
+        <div class="header__container">
+          <section class="header__search search">
+            <svg class="search__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#shape"></use>
+            </svg>
+            <input class="search__input" type="search" id="field-search" placeholder="Search">
+            <label class="visually-hidden" for="field-search">Search:</label>
+          </section>
+          <button class="header__button button-filters">
+            <svg class="button-filters__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#mixer"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="visually-hidden">Gallery of art goods</h1>
+        <div class="main__container">
+          <section class="main__gallery gallery">
+            <div class="gallery__item">
+              <img class="gallery__img" src="https://picsum.photos/200/200.webp" alt="Product item">
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="footer">
+        <section class="footer__user-navigation">
+          <ul class="user-navigation">
+            <li class="user-navigation__item">
+              <a class="user-navigation__link" href="#">
+                <svg class="user-navigation__icon" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#home-dark"></use>
+                </svg>
+                <span class="user-navigation__text">Feed</span>
+              </a>
+            </li>
+            <li class="user-navigation__item">
+              <a class="user-navigation__link" href="#">
+                <svg class="user-navigation__icon" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#menu-dark"></use>
+                </svg>
+                <span class="user-navigation__text">Gallery</span>
+              </a>
+            </li>
+            <li class="user-navigation__item">
+              <a class="user-navigation__link" href="#">
+                <svg class="user-navigation__icon" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#add-dark"></use>
+                </svg>
+                <span class="user-navigation__text">Deals</span>
+              </a>
+            </li>
+            <li class="user-navigation__item">
+              <a class="user-navigation__link" href="#">
+                <svg class="user-navigation__icon" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#chat-dark"></use>
+                </svg>
+                <span class="user-navigation__text">Notify</span>
+              </a>
+            </li>
+            <li class="user-navigation__item">
+              <a class="user-navigation__link" href="#">
+                <svg class="user-navigation__icon" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#user-dark"></use>
+                </svg>
+                <span class="user-navigation__text">Profile</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </footer>
+    </div>
+
+    <section class="filters hidden">
+      <div class="filters__wrapper">
+        <div class="filters__container">
+          <div class="filters__main-title">Filter</div>
+          <button class="filters__button-close button-close">
+            <svg class="button-close__icon" width="20" height="20">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <section class="filters__price">
+          <div class="filters__title">Price ( $ )</div>
+          <ul class="filters__list">
+            <li class="filters__item">
+              <span class="filters__span">0-200</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">200-400</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">400-600</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">More</span>
+            </li>
+          </ul>
+
+          <p class="filters__price-range">0 – $1 000 000</p>
+
+          <div class="filters__range range">
+            <div class="range__runner range__runner--left"></div>
+            <div class="range__toggle"></div>
+            <div class="range__runner range__runner--right"></div>
+          </div>
+        </section>
+
+        <section class="filters__shape">
+          <div class="filters__title">Shape</div>
+
+          <ul class="filters__list">
+            <li class="filters__item">
+              <span class="filters__span">Circle</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">Square</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">Rectangle</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">Triangle</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="filters__size">
+          <div class="filters__title">Size (Width / Height)</div>
+
+          <ul class="filters__list">
+            <li class="filters__item">
+              <span class="filters__span">0-200</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">200-400</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">400-600</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">More</span>
+            </li>
+          </ul>
+
+          <ul class="filters__list">
+            <li class="filters__item">
+              <span class="filters__span">0-200</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">200-400</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">400-600</span>
+            </li>
+            <li class="filters__item">
+              <span class="filters__span">More</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <button class="filters__button-apply">Apply</button>
+    </section>
+  </body>
+</html>

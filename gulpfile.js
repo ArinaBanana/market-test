@@ -52,6 +52,7 @@ const runServer = function () {
 
     gulp.watch("source/styles/**/*.{scss,sass}", gulp.series(processSass, reloadServer));
     gulp.watch("source/*.html", gulp.series(processHtml, reloadServer));
+    gulp.watch("source/**/*.{js,vue}", gulp.series(processWebpack, reloadServer));
 };
 
 const processCopyImg = function () {
