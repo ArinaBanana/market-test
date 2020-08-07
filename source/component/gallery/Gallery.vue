@@ -6,20 +6,12 @@
 
 <script>
 import GalleryItem from "../gallery-item/GalleryItem.vue";
-import mockApi from "../../mock/images";
 
 export default {
   name: "Gallery",
   components: {
     GalleryItem
   },
-  data: () => ({
-    images: [],
-  }),
-  mounted() {
-    mockApi(40).then((response) => {
-      this.images = response;
-    });
-  }
+  props: [`images`]
 }
 </script>
