@@ -1,6 +1,6 @@
 <template>
   <section class="main__gallery gallery">
-    <GalleryItem v-for="image in images" :image="image"></GalleryItem>
+    <GalleryItem v-for="image in images" :image="image" :key="image.id" ></GalleryItem>
   </section>
 </template>
 
