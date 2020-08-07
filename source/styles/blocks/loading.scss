@@ -1,0 +1,15 @@
+.loading__spinner {
+  position: absolute;
+  bottom: 0;
+  height: 10px;
+  background-color: red;
+  left: 0;
+  right: 0;
+}
+
+.loading__text {
+  height: 100px;
+  font-size: $font-l;
+  color: #717171;
+  text-align: center;
+}
