@@ -10,9 +10,11 @@ const generateImages = (count) => {
     return new Array(count)
         .fill(null)
         .map(() => {
+            const id = getNextId();
+            const imageId = id + 1;
             return {
-                id: getNextId(),
-                path: `https://picsum.photos/id/1003/200/200`
+                id,
+                path: `https://picsum.photos/id/${imageId}/200/200`
             }
         });
 }
@@ -21,7 +23,7 @@ const mockApi = (count) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(generateImages(count));
-        }, 2000);
+        }, 500);
     });
 };
 
