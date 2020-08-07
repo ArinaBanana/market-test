@@ -1,0 +1,6 @@
+.leave-enter-active, .leave-leave-active {
+  transition: transform .5s;
+}
+.leave-enter, .leave-leave-to {
+  transform: translateX(100%);
+}

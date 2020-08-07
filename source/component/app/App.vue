@@ -4,7 +4,9 @@
       <Main></Main>
       <Footer></Footer>
 
-      <PopupFilters @clickCloseButton="closePopupFilters" v-if="isPopupVisible"></PopupFilters>
+      <transition name="leave">
+        <PopupFilters @clickCloseButton="closePopupFilters" v-if="isPopupVisible"></PopupFilters>
+      </transition>
     </div>
 </template>
 
