@@ -6,8 +6,8 @@ const makeIdGenerator = () => {
 };
 const getNextId = makeIdGenerator();
 
-export const generateImages = () => {
-    return new Array(40)
+const generateImages = (count) => {
+    return new Array(count)
         .fill(null)
         .map(() => {
             return {
@@ -16,3 +16,13 @@ export const generateImages = () => {
             }
         });
 }
+
+const mockApi = (count) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(generateImages(count));
+        }, 2000);
+    });
+};
+
+export default mockApi;

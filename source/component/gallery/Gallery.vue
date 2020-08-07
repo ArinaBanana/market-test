@@ -5,10 +5,8 @@
 </template>
 
 <script>
-import {generateImages} from "../../mock/images";
 import GalleryItem from "../gallery-item/GalleryItem.vue";
-
-const images = generateImages();
+import mockApi from "../../mock/images";
 
 export default {
   name: "Gallery",
@@ -16,7 +14,12 @@ export default {
     GalleryItem
   },
   data: () => ({
-    images,
-  })
+    images: [],
+  }),
+  mounted() {
+    mockApi(40).then((response) => {
+      this.images = response;
+    });
+  }
 }
 </script>
